@@ -1,48 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScriptNumberGuess</title>
-    <link rel="stylesheet" href="./GuestTheNumber.css">
-    <script src="GuestTheNumber.js"></script>
+    <title>guessTheNumber</title>
+
+    <link rel="stylesheet" type="text/css" href="./GuestTheNumber.css">
 </head>
 
 <body>
 
-    <div class="nav">
-
-        <div id="game">
-            <div class="header">
-                <h1>Guest the number</h1>
-            </div>
-
-            <div class="selectLevelText">Select Level:
+    <div class="container">
+        <h1>Guess The Number</h1>
+        <div class="selectLevelText">
+            <div class="firstEnter"> Select Level:
                 <select name="selectLevel" id="selectLevel">
-                    <option value="10">Easy</option>
-                    <option value="50">Medium</option>
-                    <option value="100">Advanced</option>
-                </select>
+            <option value="level1">Easy</option>
+            <option value="level2">Medium</option>
+            <option value="level3">Advanced</option>
+        </select>
+                <span class="dipslayLevel"> </span>
+                <button id="btnPlay">Play</button>
             </div>
-            <div class="statusArea">
-                <p>Enter a number between 1-100 and click the button...</p>
-
-                <input type="number" class="userGuess" />
+            <div class="levelStatus">
+                levelstatus-placeholder
+                <div class="endGame">
+                    <div class="endText"></div>
+                    <button id="btnNewGame">Start new game</button>
+                </div>
+            </div>
+            <div class="playGround">
+                <h2 class="guessTheNumberText"> </h2>
+                <input type="number" name="userNumber" id="userNumber">
                 <button id="btnGuess">Guess</button>
                 <button id="btnReset">Reset game</button>
+                <p id="countTries"> </p>
             </div>
-
-            <div id="historyArea">
-                <h2> Guesses status</h2>
-                <ol id="historyList">
-                </ol>
+            <div class="results">
+                <h3>Guess Status</h3>
             </div>
         </div>
-    </div>
-    <script>
-    </script>
+        <script src="./GuestTheNumber.js"></script>
 </body>
 
 </html>

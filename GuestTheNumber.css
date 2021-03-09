@@ -1,49 +1,42 @@
-    .header {
-        display: block;
-        background-color: darkslategray;
-        color: #fff8dc;
-        width: 100%;
-        height: 100px;
-        margin-top: auto;
-        margin-bottom: auto;
-        padding-top: 50px;
-        text-align: center;
-    }
-    
-    #game {
-        background-color: #ffff;
-        border-radius: 10px;
-        border-style: solid;
-        border-width: 3px;
-        border-color: #080808f1;
-        padding: 10px;
-        display: block;
-        text-align: center;
-    }
-    
-    #level {
-        background-color: #ffffff;
-        border-radius: 5px;
-        border-style: solid;
-        border-width: 2px;
-        border-color: #000000;
-        margin: top 30px;
-        padding: 10px;
-        display: block;
-        text-align: center;
-    }
-    
-    .selectLevelText {
-        width: 25em;
-        padding: .5em;
-        margin: 1em auto;
-        border: 1px solid black;
-    }
-    
-    .statusArea,
-    .userGuess {
-        width: 25em;
-        padding: .5em;
-        margin: 1em auto;
-        border: 1px solid black;
-    }
+body {
+    font-size: 20px;
+    width: 75%;
+    margin: 0 auto;
+    height: 100vh;
+    border: 5px solid #999;
+}
+
+h1 {
+    height: 20vh;
+    margin: 0;
+    background: #333;
+    color: #CCC;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    padding: 2em;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+.selectLevelText,
+.playGround,
+.results {
+    width: 45em;
+    padding: 0;
+    margin: 2em auto;
+    border: 1px solid black;
+}
+
+.play-status {
+    margin: 2em;
+}
+
+
+/* common classes */
+
+.hidden {
+    display: none;
+}
