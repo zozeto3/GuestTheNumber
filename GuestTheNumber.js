@@ -8,13 +8,15 @@ function initGameState(selectedLevel) {
         (gameState.maxRange - gameState.minRange) +
         gameState.minRange);
 }
-displayLevel(levelName); {
-    dom.selectLevel.classList.add('hidden');
+
+function changeLevel(levelName) {
+    dom.selectLevelTab.classList.add('hidden');
     dom.dipslayLevel.classList.add('hidden');
     dom.dipslayLevel.classList.remove('hidden');
 
 };
-displayFinished(results); {
+
+function displayFinished(results) {
     dom.playGround.classList.add('hidden');
     dom.endGame.classList.remove("hidden");
     dom.firstEnter.classList.add('hidden');
@@ -55,7 +57,7 @@ const levelDict = {
 }
 
 let dom = {
-    btnPlay: document.querySelector(".btnPlay"),
+    btnPlay: document.querySelector("#btnPlay"),
     btnGuess: document.querySelector(".btnGuess"),
     btnReset: document.querySelector(".btnReset"),
     btnNewGame: document.querySelector(".btnNewGame"),
@@ -85,7 +87,7 @@ let gameVariables = {
 /*                               Events handlers                              */
 /* -------------------------------------------------------------------------- */
 // click on btnStartPlay
-dom.btnStartPlay.addEventListener('click', startPlay);
+dom.btnPlay.addEventListener('click', btnPlay);
 
 
 // click on btnResetGame
@@ -97,5 +99,5 @@ dom.btnStartPlay.addEventListener('click', startPlay);
 
 // on page load
 window.onload = (event) => {
-    resetGame();
+    changeLevel();
 };
